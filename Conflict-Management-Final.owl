@@ -1,0 +1,3404 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#"
+     xml:base="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology">
+        <rdfs:comment>A construction conflict management ontology to use in international collaborations through Common Data Environment.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasCategory">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictCategory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasEscalationLevel -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasEscalationLevel">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasLevelOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasLevelOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasLocation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasLocation">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasRequirement -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasRequirement">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isRequired"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasResult -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasResult">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isResultOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSourceOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasTitle">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictTitle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasType -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasType">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isTypeOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesActor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesActor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isActorInvolved"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isStakeholderInvolved"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isActorInvolved -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isActorInvolved">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isApproachto -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isApproachto">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSolvedWith"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isRequired -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isRequired">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isResultOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isResultOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSolvedWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSolvedWith">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSourceOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSourceOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isStakeholderInvolved -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isStakeholderInvolved">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isTypeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isTypeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasCertification -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasCertification"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasNativeLanguage -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasNativeLanguage">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSolvedConflictCases -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSolvedConflictCases">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasYearsOfExperience -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasYearsOfExperience">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isInTimeZone -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isInTimeZone">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isNativeEnglish -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isNativeEnglish"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#speaksFluently -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#speaksFluently"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentPersonalProtectiveEquipmentSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentPersonalProtectiveEquipmentSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentSafetyEquipmentSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentSafetyEquipmentSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentWorkPermitSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentWorkPermitSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AccomodatingApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AccomodatingApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AcousticEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AcousticEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AdversitySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AdversitySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArbitrationApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArbitrationApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Archeologist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Archeologist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Architect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Architect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AuthorityRefferalApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AuthorityRefferalApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AvoidingApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AvoidingApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BIMManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BIMManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BigData -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BigData">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BoundryObjects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BoundryObjects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BuildingRegulationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BuildingRegulationType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CarpentryContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CarpentryContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Catastrophic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Catastrophic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClashCoordinationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClashCoordinationType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationType"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignCoordinationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClashDetection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClashDetection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClientFeedbackType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClientFeedbackType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClosedStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClosedStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CodeComplianceSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CodeComplianceSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CollaborativeApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CollaborativeApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommercialObjectiveSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommercialObjectiveSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommissioningType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommissioningType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectIssueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommonDataEnvironment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommonDataEnvironment">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompetingApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompetingApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Competitors -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Competitors">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompromiseApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompromiseApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompromisingApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompromisingApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConcreteworkContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConcreteworkContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasCategory"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictCategory"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasEscalationLevel"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasLevelOf"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasLocation"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLocation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasResult"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasTitle"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictTitle"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesActor"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#isSolvedWith"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictArbitrator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictArbitrator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictCategory"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLocation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLocation"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictMediator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictMediator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictNegotiator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictNegotiator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictNotAdressed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictNotAdressed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictParty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictParty">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictActor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictTitle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictingGoalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictingGoalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructabilitySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructabilitySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionEquipmentOperators -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionEquipmentOperators">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionErrosSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionErrosSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ContractVariationsSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ContractVariationsSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CostControler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CostControler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CostManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CostManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Creativity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Creativity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CuluralBackgroundSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CuluralBackgroundSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DecreasedTrust -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DecreasedTrust">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Delays -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Delays">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DeliveryType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DeliveryType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommissioningType"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Internal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignChangeSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignChangeSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignCoordinationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignCoordinationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignCoordinationType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignCoordinationType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignDeficiencySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignDeficiencySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignErrorSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignErrorSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignFlawSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignFlawSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignImprovement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignImprovement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentManagementType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DisputeStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DisputeStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentManagementType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentManagementType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectIssueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentationConflictSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentationConflictSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DraftStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DraftStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DysfunctionalType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DysfunctionalType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasResult"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegativeResult"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElectricalContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElectricalContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElectricalEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElectricalEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElevatorContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElevatorContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EmotionalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EmotionalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EndUsers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EndUsers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnergyEnginner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnergyEnginner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalEnginner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalEnginner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalStressSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalStressSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Environmentalist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Environmentalist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EquipmentSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EquipmentSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExistingConditionType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExistingConditionType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Internal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManagementType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManagementType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectIssueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FailedInspectionSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FailedInspectionSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EquipmentSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Fairness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Fairness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FatigueSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FatigueSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectIssueType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FinancialSanction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FinancialSanction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Fine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Fine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FinancialSanction"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LiquidatedDamage"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FireSafetyEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FireSafetyEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FormalApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FormalApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AuthorityRefferalApproach"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FunctionalType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FunctionalType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasResult"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FunctionalityType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FunctionalityType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GlazingContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GlazingContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GovernmentAuthority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GovernmentAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GroupLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GroupLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GroupType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GroupType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HealthAndSafetyControler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HealthAndSafetyControler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HealthAndSafetyType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HealthAndSafetyType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HighLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HighLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HouseKeepingSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HouseKeepingSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanErrorSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanErrorSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperEquipmentSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperEquipmentSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EquipmentSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperHouseKeepingSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperHouseKeepingSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperMaintananceSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperMaintananceSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EquipmentSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InadequateTrainingSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InadequateTrainingSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteDocumentationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteDocumentationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteSpecificationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteSpecificationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteWorkSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteWorkSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteWorkType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteWorkType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncopatibleViewSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncopatibleViewSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncorrectMaterialSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncorrectMaterialSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncreasedEfficiency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncreasedEfficiency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IndividualLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IndividualLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IndividualType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IndividualType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IneffectiveProcessSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IneffectiveProcessSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses"/>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformalApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformalApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AuthorityRefferalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformationExcessSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformationExcessSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformationFilteringSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformationFilteringSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Innovation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Innovation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InstallationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InstallationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InsufficientPlanningSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InsufficientPlanningSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InsufficientProcedureSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InsufficientProcedureSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InteriorArchitect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InteriorArchitect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Internal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Internal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InternalType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InternalType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Internal"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InterpersonalType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InterpersonalType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IronworkContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IronworkContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LandscapeArchitect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LandscapeArchitect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LanguageSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LanguageSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LatentLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LatentLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LifeCycleType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LifeCycleType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LiquidatedDamage -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LiquidatedDamage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FinancialSanction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocalAuthority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocalAuthority">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocalResidents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocalResidents">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LogisticsType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LogisticsType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LowLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LowLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LowerProductivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LowerProductivity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MaintenanceType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MaintenanceType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Major -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Major">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MalfunctioningStructureSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MalfunctioningStructureSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManufacturerDefectSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManufacturerDefectSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Marginal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Marginal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MasonryContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MasonryContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MaterialLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MaterialLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MechanicalEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MechanicalEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Media -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Media">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MediationApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MediationApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ModelAndToolSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ModelAndToolSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MoneyLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MoneyLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MotivationLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MotivationLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NaturalDisasterSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NaturalDisasterSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegativeResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegativeResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Negligible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Negligible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegotationApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegotationApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NotApprovedStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NotApprovedStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OpenStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OpenStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OptimalLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OptimalLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PaintingContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PaintingContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalitySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalitySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlanningSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlanningSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlumbingContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlumbingContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlumbingEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlumbingEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoliticalOrganisation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoliticalOrganisation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoliticalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoliticalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoorCoordinationSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoorCoordinationSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProcedureIgnoranceSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProcedureIgnoranceSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectAdministration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectAdministration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectBoard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectBoard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectConsultant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectConsultant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectExecutive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectExecutive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectInvestor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectInvestor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectIssueType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectIssueType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectOwner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectOwner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectSponsor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectSponsor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Prototyping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Prototyping">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityControler -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityControler">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityType">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommissioningType"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ReadyToInspectStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ReadyToInspectStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RealEstateOwner -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RealEstateOwner">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Redesign -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Redesign">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Reorganization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Reorganization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RequirementChangeType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RequirementChangeType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceSharingSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceSharingSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegativeResult"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Reworks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Reworks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RoleIncopatibilitySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RoleIncopatibilitySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetyManager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetyManager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetySource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetySource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Satisfaction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Satisfaction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SemanticDifferenceSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SemanticDifferenceSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Serious -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Serious">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSeverity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ShareHolders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ShareHolders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DemandStakeholders"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Simulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Simulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SocialBackgroundSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SocialBackgroundSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SocialSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SocialSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SolarPhotovoltaicContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SolarPhotovoltaicContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StalemateLevel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StalemateLevel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictEscalationLevel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Supplier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Supplier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SupplyStakeholders">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Internal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamBonding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamBonding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamPerformanceResult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegativeResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictManagementApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TensionRelease -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TensionRelease">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TerminologicalApproach -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TerminologicalApproach">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TimeLoss -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TimeLoss">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceLoss"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TimeZoneSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TimeZoneSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TradeDamageSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TradeDamageSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TradeUnion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TradeUnion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#UndefinedScopeSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#UndefinedScopeSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValuePartition">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InferredClasses"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValueSystemSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValueSystemSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VentilationContractor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VentilationContractor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VibrationControlEngineer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VibrationControlEngineer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Visualization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Visualization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VoidStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VoidStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WeatherSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WeatherSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WinLose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WinLose">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WinWin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WinWin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralResult"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkBackgroundSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkBackgroundSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkCompletedStatus -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkCompletedStatus">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkmanshipSource -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkmanshipSource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkmanshipType -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkmanshipType">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArchitectX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArchitectX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Architect"/>
+        <hasAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</hasAge>
+        <hasName>BruceWayne</hasName>
+        <hasNativeLanguage>English</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasYearsOfExperience>
+        <isInTimeZone>London</isInTimeZone>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNativeEnglish>
+        <speaksFluently>English</speaksFluently>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArchitectY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArchitectY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Architect"/>
+        <hasNativeLanguage>Polish</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Serious"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClosedStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Catastrophic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OpenStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Catastrophic"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DraftStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Major"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NotApprovedStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Negligible"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClosedStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Major"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OpenStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Major"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ReadyToInspectStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Serious"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OpenStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Conflict"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSeverity"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Negligible"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasStatus"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClosedStatus"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictTest01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictTest01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictType"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#hasSource"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructabilitySource"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#involvesStakeholder"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArchitectX"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerY"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#JuniorBIMManagerX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#JuniorBIMManagerX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BIMManager"/>
+        <hasNativeLanguage>Spanish</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerAssistantX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerAssistantX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager"/>
+        <hasNativeLanguage>English</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager"/>
+        <hasCertification>PRINCE2</hasCertification>
+        <hasNativeLanguage>English</hasNativeLanguage>
+        <hasSolvedConflictCases rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hasSolvedConflictCases>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager"/>
+        <hasCertification>PRINCE2</hasCertification>
+        <hasNativeLanguage>French</hasNativeLanguage>
+        <hasSolvedConflictCases rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</hasSolvedConflictCases>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</hasYearsOfExperience>
+        <speaksFluently>Chinese</speaksFluently>
+        <speaksFluently>English</speaksFluently>
+        <speaksFluently>French</speaksFluently>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerZ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManagerZ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager"/>
+        <hasCertification>PRINCE2</hasCertification>
+        <hasSolvedConflictCases rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasSolvedConflictCases>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hasYearsOfExperience>
+        <speaksFluently>English</speaksFluently>
+        <speaksFluently>Spanish</speaksFluently>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyorX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyorX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyor"/>
+        <hasNativeLanguage>Hindi</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</hasYearsOfExperience>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyorY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyorY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyor"/>
+        <hasNativeLanguage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SeniorBIMManagerX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SeniorBIMManagerX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BIMManager"/>
+        <hasNativeLanguage>English</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineerX -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineerX">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineer"/>
+        <hasNativeLanguage>Italian</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</hasYearsOfExperience>
+        <isNativeEnglish rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isNativeEnglish>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineerY -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineerY">
+        <rdf:type rdf:resource="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineer"/>
+        <hasNativeLanguage>English</hasNativeLanguage>
+        <hasYearsOfExperience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</hasYearsOfExperience>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentPersonalProtectiveEquipmentSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FatigueSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanErrorSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProcedureIgnoranceSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentSafetyEquipmentSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AbsentWorkPermitSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperHouseKeepingSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncorrectMaterialSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InsufficientPlanningSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InsufficientProcedureSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoorCoordinationSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AccomodatingApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AvoidingApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CollaborativeApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompetingApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompromisingApproach"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AcousticEngineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Architect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElectricalEngineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnergyEnginner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalEnginner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FireSafetyEngineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InteriorArchitect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LandscapeArchitect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MechanicalEngineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlumbingEngineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StructuralEngineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VibrationControlEngineer"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AdversitySource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NaturalDisasterSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoliticalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SocialSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ArbitrationApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CompromiseApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MediationApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegotationApproach"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Archeologist"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Competitors"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EndUsers"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Environmentalist"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GovernmentAuthority"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocalAuthority"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocalResidents"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Media"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PoliticalOrganisation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RealEstateOwner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TradeUnion"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#AuthorityRefferalApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagerialApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalApproach"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BIMManager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionManager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CostManager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Engineer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MainContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectManager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityManager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QuantitySurveyor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetyManager"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BackgroundSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExternalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualitySource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SafetySource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TechnicalSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BigData"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommonDataEnvironment"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SoftwareApproach"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TerminologicalApproach"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BoundryObjects"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClashDetection"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Prototyping"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Simulation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Visualization"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#BuildingRegulationType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClientFeedbackType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ExistingConditionType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteWorkType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RequirementChangeType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CarpentryContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConcreteworkContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionEquipmentOperators"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElectricalContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ElevatorContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GlazingContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IronworkContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MasonryContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PaintingContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlumbingContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SolarPhotovoltaicContractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VentilationContractor"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Catastrophic"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Major"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Marginal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Negligible"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Serious"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ClosedStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DisputeStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DraftStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NotApprovedStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OpenStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ReadyToInspectStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#VoidStatus"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkCompletedStatus"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CodeComplianceSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructionErrosSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ContractVariationsSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignChangeSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignErrorSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DocumentationConflictSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteDocumentationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#UndefinedScopeSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommercialObjectiveSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictingGoalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EmotionalSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncopatibleViewSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PersonalitySource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ValueSystemSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommissioningType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CoordinationType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManagementType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FieldManagementType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CommunicationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LanguageSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LocationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ModelAndToolSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceSharingSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TimeZoneSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictArbitrator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictMediator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictNegotiator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictParty"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConflictNotAdressed"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WinLose"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WinWin"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ConstructabilitySource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignCoordinationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignDeficiencySource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CostControler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HealthAndSafetyControler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#QualityControler"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Suncontractor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Supplier"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Creativity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignImprovement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Fairness"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncreasedEfficiency"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Innovation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Satisfaction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TeamBonding"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TensionRelease"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#CuluralBackgroundSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SocialBackgroundSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkBackgroundSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DecreasedTrust"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Delays"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LowerProductivity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MotivationLoss"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#DesignFlawSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HouseKeepingSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InadequateTrainingSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteWorkSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InstallationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManufacturerDefectSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PlanningSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TradeDamageSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WeatherSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkmanshipSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EnvironmentalStressSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IneffectiveProcessSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MalfunctioningStructureSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#RoleIncopatibilitySource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#EquipmentSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HumanSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ManagementSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FacilityManager"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectAdministration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectBoard"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectConsultant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectExecutive"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectInvestor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectOwner"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectSponsor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ShareHolders"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FailedInspectionSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperEquipmentSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ImproperMaintananceSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FinancialSanction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Redesign"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Reorganization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourceLoss"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#Reworks"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#FunctionalityType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LifeCycleType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MaintenanceType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GeneralResult"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#NegativeResult"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#PositiveResult"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#GroupLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IndividualLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OrganizationalLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ProjectLevel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HealthAndSafetyType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LogisticsType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#ResourcesType"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#WorkmanshipType"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#HighLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LatentLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#LowLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#OptimalLevel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#StalemateLevel"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#IncompleteSpecificationSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformationExcessSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#InformationFilteringSource"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#SemanticDifferenceSource"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MaterialLoss"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#MoneyLoss"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/hp/ontologies/2020/6/conflictmanagementontology#TimeLoss"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
